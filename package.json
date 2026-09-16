@@ -1,21 +1,29 @@
 {
-  "name": "margin-play",
+  "name": "astro-bear-blog-theme",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@11.8.0",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "check": "astro check",
+    "deploy": "pnpm run build && wrangler deploy",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^7.0.7",
+    "@astrojs/mdx": "^7.0.5",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.2.4",
-    "sharp": "^0.35.0"
+    "astro": "^7.3.1",
+    "sharp": "^0.35.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.123.0"
   }
 }

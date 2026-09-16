@@ -1,63 +1,91 @@
-# Astro Starter Kit: Blog
+# Astro Bear Blog
+
+A complete, static Astro blog template with a plain Bear Blog-inspired design. It supports Markdown and MDX content, blog posts under `/blog/`, root-level pages, tag archives, RSS, sitemap, social metadata, and a minimal CSS footprint.
+
+Inspired by the [Hugo Bear Blog theme](https://github.com/janraasch/hugo-bearblog).
+
+## Demo
+
+See live demo at [astro-bearblog.harleyjwilson.workers.dev](https://astro-bearblog.harleyjwilson.workers.dev).
+
+## Quick Start
+
+Requirements: Node.js `>=22.12.0` and pnpm.
 
 ```sh
-npm create astro@latest -- --template blog
+pnpm install
+pnpm dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Configuration
 
-Features:
+Edit `src/consts.ts` before publishing:
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+- `SITE_TITLE`, `SITE_DESCRIPTION`, `SITE_LANG`
+- `SITE_URL` — the canonical production URL used by RSS, sitemap, canonical links, and social cards
+- `DATE_FORMAT`
+- `SITE_FAVICON`
+- `CUSTOM_STYLESHEET`
+- `NAV_ITEMS` and `FOOTER_ITEMS`
 
-## 🚀 Project Structure
+The Open Graph image lives at `src/assets/opengraph.jpg`.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Content
 
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+Site content is stored in Astro pages and content collections:
+
+| Type        | Location                      | URL                |
+| ----------- | ----------------------------- | ------------------ |
+| Home page   | `src/pages/index.md`          | `/`                |
+| Posts       | `src/content/blog/*.{md,mdx}` | `/blog/<slug>/`    |
+| Pages       | `src/pages/**/*.{md,mdx}`     | based on file path |
+| Blog index  | generated route               | `/blog/`           |
+| Tag archive | generated route               | `/tags/<tag>/`     |
+
+### Post frontmatter
+
+```yaml
+---
+title: Example post
+description: A short description for metadata and feeds.
+pubDate: 2026-01-15
+tags: [astro, blog]
+updatedDate: 2026-01-16
+draft: false
+---
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Required fields: `title`, `description`, `pubDate`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Optional fields: `updatedDate`, `tags`, `draft`.
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+Draft posts and future-dated posts are excluded from generated pages and feeds.
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Page frontmatter
 
-## 🧞 Commands
+```yaml
+---
+layout: ../layouts/Base.astro
+title: About
+description: Optional page description.
+---
+```
 
-All commands are run from the root of the project, from a terminal:
+Markdown pages should specify the shared `Base.astro` layout. The relative layout path depends on the page's directory.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Commands
 
-## 👀 Want to learn more?
+| Command        | Action                               |
+| -------------- | ------------------------------------ |
+| `pnpm dev`     | Start the local development server   |
+| `pnpm build`   | Build the static site to `dist/`     |
+| `pnpm check`   | Run Astro and TypeScript checks      |
+| `pnpm preview` | Preview the production build locally |
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Acknowledgements
 
-## Credit
+This project is inspired by [Bear Blog](https://bearblog.dev), created by [Herman](https://herman.bearblog.dev), and the [Hugo Bear Blog theme](https://github.com/janraasch/hugo-bearblog) by Jan Raasch.
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+## License
+
+[MIT](LICENSE) © 2026 Harley Wilson
