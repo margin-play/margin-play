@@ -1,8 +1,7 @@
 ---
-draft: true
 title: 'AAがひどい'
 description: ''
-pubDate: 2026-09-19
+pubDate: 2026-09-18
 tags: 
   - '声かけ'
 ---
