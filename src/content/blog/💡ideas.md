@@ -7,6 +7,9 @@ tags:
   - '声かけ'
 ---
 
+Fragile T-shirt in Daiso
+
+
 継続してること
 成果は不要
 筋トレ(ジム)
