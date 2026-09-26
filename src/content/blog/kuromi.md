@@ -1,5 +1,5 @@
 ---
-title: 'Vibe'
+title: 'KUROMI'
 description: ''
 pubDate: 2026-09-26
 ---

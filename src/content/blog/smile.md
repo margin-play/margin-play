@@ -2,8 +2,6 @@
 title: 'Smile'
 description: ''
 pubDate: 2026-09-15
-tags: 
-  - '声かけ'
 ---
 
 100円ショップで買い物をしていた。

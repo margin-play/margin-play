@@ -3,7 +3,7 @@ title: 'UFOキャッチャー'
 description: ''
 pubDate: 2026-08-28
 tags: 
-  - '海外'
+  - 'abroad'
 ---
 
 ゲームセンターで、カップルがUFOキャッチャーをやっていた。

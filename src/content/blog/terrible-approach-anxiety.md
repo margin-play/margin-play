@@ -2,8 +2,6 @@
 title: 'AAがひどい'
 description: ''
 pubDate: 2026-09-18
-tags: 
-  - '声かけ'
 ---
 
 AAが酷い。

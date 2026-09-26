@@ -2,8 +2,6 @@
 title: '駅前で'
 description: ''
 pubDate: 2026-09-21
-tags: 
-  - '声かけ'
 ---
 
 外は雨だった。

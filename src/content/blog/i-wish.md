@@ -2,8 +2,6 @@
 title: 'I wish!'
 description: ''
 pubDate: 2026-08-27
-tags: 
-  - '声かけ'
 ---
 
 僕はドラッグストアで  

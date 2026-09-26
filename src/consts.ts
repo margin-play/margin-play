@@ -36,10 +36,5 @@ export const NAV_ITEMS: LinkItem[] = [
   { label: "About", href: "/about/" },
   { label: "Blog", href: "/blog/" },
 ];
-export const FOOTER_ITEMS: FooterItem[] = [
-  { label: "Made with" },
-  {
-    label: "Astro ʕ•ᴥ•ʔ Bear",
-    href: "https://github.com/harleyjwilson/astro-bearblog",
-  },
-];
+export const FOOTER_ITEMS: FooterItem[] = [];
+  
