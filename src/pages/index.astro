@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import PostList from "../components/PostList.astro";
+import { SITE_DESCRIPTION } from "../consts";
+import Base from "../layouts/Base.astro";
+import { isPublished } from "../lib/content";
+
+// 【元の階層に戻す時のメモ】
+// 1. このファイルを src/pages/blog/index.astro に移動する
+// 2. 以下のパスを ../ から ../../ に書き換える：
+// import PostList from "../../components/PostList.astro";
+// import { SITE_DESCRIPTION } from "../../consts";
+// import Base from "../../layouts/Base.astro";
+// import { isPublished } from "../../lib/content";
+// 3. src/pages/_index.md のアンダースコアを消して src/pages/index.md に戻す
+
+const posts = (await getCollection("blog"))
+  .filter(isPublished)
+  .sort((b, a) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
+---
+
+<Base title="Blog" description={SITE_DESCRIPTION}><PostList {posts} /></Base>
