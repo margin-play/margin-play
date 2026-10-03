@@ -3,7 +3,7 @@ title: '待合室'
 description: ''
 pubDate: 2026-10-03
 tags: 
-  - 'Abroad'
+  - 'abroad'
 ---
 
 ターミナル駅に着いた。

@@ -15,7 +15,7 @@ export interface DateFormat {
 }
 
 // Site-wide configuration.
-export const SITE_TITLE = "役に立たないブログ";
+export const SITE_TITLE = "声をかけることについて語るときに僕の語ること";
 export const SITE_DESCRIPTION = "";
 export const SITE_URL = "https://localhost:4321";
 export const SITE_LANG = "ja";
